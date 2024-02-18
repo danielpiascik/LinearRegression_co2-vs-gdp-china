@@ -6,14 +6,14 @@ import pickle
 app = FastAPI(debug=True)
 
 
-@app.get("/docs")
+@app.get("/")
 def home():
     return {"Prediction of the CO2 emissions in China based on GDP per capital"}
 
 @app.post("/predict")
 def predict(GDP_per_capita: float):
 
-    model = pickle.load(open("D:/CODS/! FAST API - Cwiczenia/CW_1_CO2_China/CO2_model_pickle.pkl", "rb"))
+    model = pickle.load(open("D:/CODS/_Data Science - Portfolio Projects/! IN PROGRESS/4. LINEAR REGRESSION - CO2_and_GDP_in_China/FAST_API/CO2_model_pickle", "rb"))
     make_prediction = model.predict([[GDP_per_capita]])
     output = round(make_prediction[0], 1)
 

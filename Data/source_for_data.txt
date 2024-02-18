@@ -1,1 +1,2 @@
+Source of the data base for current project:
 https://ourworldindata.org/grapher/co2-emissions-vs-gdp
